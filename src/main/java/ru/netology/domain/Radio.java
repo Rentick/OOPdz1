@@ -34,11 +34,11 @@ public class Radio {
     }
 
     public void setCurrentNumberRadio(int currentNumberRadio) {
-        if (currentNumberRadio > maxNumberRadio) {
+        if (currentNumberRadio >= maxNumberRadio) {
             return;
         }
 
-        if (currentNumberRadio < minNumberRadio) {
+        if (currentNumberRadio <= minNumberRadio) {
             return;
         }
 
@@ -75,11 +75,11 @@ public class Radio {
     }
 
     public void setCurrentVolumeSound(int currentVolumeSound) {
-        if (currentVolumeSound > maxVolumeSound) {
+        if (currentVolumeSound >= maxVolumeSound) {
             return;
         }
 
-        if (currentVolumeSound < minVolumeSound) {
+        if (currentVolumeSound <= minVolumeSound) {
             return;
         }
 
