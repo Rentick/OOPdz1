@@ -1,39 +1,9 @@
 package ru.netology.domain;
 
 public class Conditioner {
-//    private int maxTemperature = 10;
-//    private int minTemperature = 2;
-//    private int currentTemperature = 5;
-
-//    public int getCurrentTemperature() {
-//        return currentTemperature;
-//    }
-//
-//    public void setCurrentTemperature(int currentTemperature) {
-//        this.currentTemperature = currentTemperature;
-//    }
-//
-//    public void IncreaseCurrentTemperature(int currentTemperature) {
-//        if (currentTemperature >= maxTemperature) {
-//            return;
-//        } else {
-//            currentTemperature++;
-//        }
-//
-//        public void DecreaseCurrentTemperature(int currentTemperature) {
-//            if (currentTemperature <= minTemperature) {
-//                return;
-//            } else {
-//                currentTemperature--;
-//            }
-//        }
-//    }
-//}
-//
-
     private int maxTemperature = 10;
     private int minTemperature = 2;
-    private int currentTemperature = 9;
+    private int currentTemperature;
 
 
     public int getMaxTemperature() {
@@ -79,7 +49,35 @@ public class Conditioner {
     }
 }
 
+//    private int maxTemperature = 10;
+//    private int minTemperature = 2;
+//    private int currentTemperature = 5;
 
+//    public int getCurrentTemperature() {
+//        return currentTemperature;
+//    }
+//
+//    public void setCurrentTemperature(int currentTemperature) {
+//        this.currentTemperature = currentTemperature;
+//    }
+//
+//    public void IncreaseCurrentTemperature(int currentTemperature) {
+//        if (currentTemperature >= maxTemperature) {
+//            return;
+//        } else {
+//            currentTemperature++;
+//        }
+//
+//        public void DecreaseCurrentTemperature(int currentTemperature) {
+//            if (currentTemperature <= minTemperature) {
+//                return;
+//            } else {
+//                currentTemperature--;
+//            }
+//        }
+//    }
+//}
+//
 //increaseCurrentTemperature - увеличивает температуру на 1, если не достигнута максимальная (maxTemperature),
 //последующие (после достижения maxTemperature) вызовы метода не должны ничего менять в состоянии объекта
 

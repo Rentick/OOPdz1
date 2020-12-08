@@ -3,11 +3,11 @@ package ru.netology.domain;
 public class Radio {
     private int maxNumberRadio = 9;
     private int minNumberRadio = 0;
-    private int currentNumberRadio = 9;
+    private int currentNumberRadio;
 
     private int maxVolumeSound = 10;
     private int minVolumeSound = 0;
-    private int currentVolumeSound = 10;
+    private int currentVolumeSound;
 
     public int getMaxNumberRadio() {
         return maxNumberRadio;
