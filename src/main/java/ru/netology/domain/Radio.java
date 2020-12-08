@@ -1,13 +1,13 @@
 package ru.netology.domain;
 
 public class Radio {
-    private int maxNumberRadio;
-    private int minNumberRadio;
-    private int currentNumberRadio;
+    private int maxNumberRadio = 9;
+    private int minNumberRadio = 0;
+    private int currentNumberRadio = 9;
 
-    private int maxVolumeSound;
-    private int minVolumeSound;
-    private int currentVolumeSound;
+    private int maxVolumeSound = 10;
+    private int minVolumeSound = 0;
+    private int currentVolumeSound = 10;
 
     public int getMaxNumberRadio() {
         return maxNumberRadio;
@@ -34,21 +34,22 @@ public class Radio {
     }
 
     public void setCurrentNumberRadio(int currentNumberRadio) {
-        if (currentNumberRadio >= maxNumberRadio) {
-            return;
+        if (currentNumberRadio > maxNumberRadio) {
+            setCurrentNumberRadio(getMinNumberRadio());
         }
 
-        if (currentNumberRadio <= minNumberRadio) {
-            return;
+        if (currentNumberRadio < minNumberRadio) {
+            setCurrentNumberRadio(getMaxNumberRadio());
         }
 
         this.currentNumberRadio = currentNumberRadio;
     }
+
 //    Номер текущей радиостанции изменяется в пределах от 0 до 9
 //        Если текущая радиостанция - 9 и клиент нажал на кнопку next (следующая) на пульте, то текущей должна стать 0-ая
 //        Если текущая радиостанция - 0 и клиент нажал на кнопку prev (предыдущая) на пульте, то текущей должна стать 9-ая
 //        Клиент должен иметь возможность выставлять номер радиостанции с цифрового пульта (вводя числа 0 - 9)
-
+//
     public int getMaxVolumeSound() {
 
         return maxVolumeSound;
@@ -75,15 +76,34 @@ public class Radio {
     }
 
     public void setCurrentVolumeSound(int currentVolumeSound) {
-        if (currentVolumeSound >= maxVolumeSound) {
+        if (currentVolumeSound > maxVolumeSound) {
             return;
         }
 
-        if (currentVolumeSound <= minVolumeSound) {
+        if (currentVolumeSound < minVolumeSound) {
             return;
         }
 
         this.currentVolumeSound = currentVolumeSound;
+    }
+    public void increaseCurrentNumberRadio() {
+        int increaseStation = getCurrentNumberRadio();
+        setCurrentNumberRadio(increaseStation);
+    }
+
+    public void decreaseCurrentNumberRadio() {
+        int decreaseStation = getCurrentNumberRadio();
+        setCurrentNumberRadio(decreaseStation);
+    }
+
+    public void increaseCurrentVolumeSound() {
+        int increaseVolume = getCurrentVolumeSound();
+        setCurrentVolumeSound(increaseVolume);
+    }
+
+    public void decreaseCurrentVolumeSound() {
+        int decreaseVolume = getCurrentVolumeSound();
+        setCurrentVolumeSound(decreaseVolume);
     }
 }
 //    Клиент должен иметь возможность увеличивать и уменьшать уровень громкости звука (в пределах от 0 до 10)*

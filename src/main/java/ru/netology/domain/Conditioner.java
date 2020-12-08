@@ -1,60 +1,85 @@
 package ru.netology.domain;
 
 public class Conditioner {
-    private int maxTemperature;
-    private int minTemperature;
-    private int increaseCurrentTemperature;
-    private int decreaseCurrentTemperature;
+//    private int maxTemperature = 10;
+//    private int minTemperature = 2;
+//    private int currentTemperature = 5;
+
+//    public int getCurrentTemperature() {
+//        return currentTemperature;
+//    }
+//
+//    public void setCurrentTemperature(int currentTemperature) {
+//        this.currentTemperature = currentTemperature;
+//    }
+//
+//    public void IncreaseCurrentTemperature(int currentTemperature) {
+//        if (currentTemperature >= maxTemperature) {
+//            return;
+//        } else {
+//            currentTemperature++;
+//        }
+//
+//        public void DecreaseCurrentTemperature(int currentTemperature) {
+//            if (currentTemperature <= minTemperature) {
+//                return;
+//            } else {
+//                currentTemperature--;
+//            }
+//        }
+//    }
+//}
+//
+
+    private int maxTemperature = 10;
+    private int minTemperature = 2;
+    private int currentTemperature = 9;
 
 
     public int getMaxTemperature() {
-
         return maxTemperature;
     }
 
     public void setMaxTemperature(int maxTemperature) {
         this.maxTemperature = maxTemperature;
-
     }
 
     public int getMinTemperature() {
-
         return minTemperature;
     }
 
     public void setMinTemperature(int minTemperature) {
         this.minTemperature = minTemperature;
-
     }
 
-    public int getIncreaseCurrentTemperature() {
-        return increaseCurrentTemperature;
+
+    public int getCurrentTemperature() {
+        return currentTemperature;
     }
 
-    public void setIncreaseCurrentTemperature(int increaseCurrentTemperature) {
-        if (increaseCurrentTemperature >= maxTemperature) {
+    public void setCurrentTemperature(int currentTemperature) {
+        if (currentTemperature > maxTemperature) {
             return;
         }
-        if (increaseCurrentTemperature <= minTemperature) {
+        if (currentTemperature < minTemperature) {
             return;
         }
-        this.increaseCurrentTemperature = increaseCurrentTemperature +1;
+        this.currentTemperature = currentTemperature;
     }
 
-    public int getDecreaseCurrentTemperature() {
-        return decreaseCurrentTemperature;
+
+    public void increaseCurrentTemperature() {
+        int increaseTemperature = getCurrentTemperature() + 1;
+        setCurrentTemperature(increaseTemperature);
     }
 
-    public void setDecreaseCurrentTemperature(int decreaseCurrentTemperature) {
-        if (decreaseCurrentTemperature >= maxTemperature) {
-            return;
-        }
-        if (decreaseCurrentTemperature <= minTemperature) {
-            return;
-        }
-        this.decreaseCurrentTemperature = decreaseCurrentTemperature -1;
+    public void decreaseCurrentTemperature() {
+        int decreaseTemperature = getCurrentTemperature() - 1;
+        setCurrentTemperature(decreaseTemperature);
     }
 }
+
+
 //increaseCurrentTemperature - увеличивает температуру на 1, если не достигнута максимальная (maxTemperature),
 //последующие (после достижения maxTemperature) вызовы метода не должны ничего менять в состоянии объекта
 
