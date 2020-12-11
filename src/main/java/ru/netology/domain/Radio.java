@@ -87,22 +87,22 @@ public class Radio {
         this.currentVolumeSound = currentVolumeSound;
     }
     public void increaseCurrentNumberRadio() {
-        int increaseStation = getCurrentNumberRadio();
+        int increaseStation = getCurrentNumberRadio() + 1;
         setCurrentNumberRadio(increaseStation);
     }
 
     public void decreaseCurrentNumberRadio() {
-        int decreaseStation = getCurrentNumberRadio();
+        int decreaseStation = getCurrentNumberRadio() - 1;
         setCurrentNumberRadio(decreaseStation);
     }
 
     public void increaseCurrentVolumeSound() {
-        int increaseVolume = getCurrentVolumeSound();
+        int increaseVolume = getCurrentVolumeSound() + 1;
         setCurrentVolumeSound(increaseVolume);
     }
 
     public void decreaseCurrentVolumeSound() {
-        int decreaseVolume = getCurrentVolumeSound();
+        int decreaseVolume = getCurrentVolumeSound() - 1;
         setCurrentVolumeSound(decreaseVolume);
     }
 }
