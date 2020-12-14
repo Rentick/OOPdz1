@@ -13,6 +13,7 @@ class RadioTest {
 //        radio.setCurrentNumberRadio(newMaxNumberRadio);
         radio.setCurrentNumberRadio(radio.getMaxNumberRadio() - 1);
         radio.increaseCurrentNumberRadio();
+        radio.increaseCurrentNumberRadio();
 //        System.out.println(radio.getCurrentNumberRadio());
         assertEquals(radio.getMinNumberRadio(), radio.getCurrentNumberRadio());
     }
@@ -23,6 +24,7 @@ class RadioTest {
 //        int newMinNumberRadio = radio.getMaxNumberRadio();
 //        radio.setCurrentNumberRadio(newMinNumberRadio);
         radio.setCurrentNumberRadio(radio.getMinNumberRadio() + 1);
+        radio.decreaseCurrentNumberRadio();
         radio.decreaseCurrentNumberRadio();
 //        System.out.println(radio.getCurrentNumberRadio());
         assertEquals(radio.getMaxNumberRadio(), radio.getCurrentNumberRadio());
