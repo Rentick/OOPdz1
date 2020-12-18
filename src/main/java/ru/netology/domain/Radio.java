@@ -1,15 +1,16 @@
 package ru.netology.domain;
 
 public class Radio {
-    private int maxNumberRadio = 9;
-    private int minNumberRadio = 0;
+    private int maxNumberRadio;
+    private int minNumberRadio;
     private int currentNumberRadio;
 
-    private int maxVolumeSound = 10;
-    private int minVolumeSound = 0;
+    private int maxVolumeSound;
+    private int minVolumeSound;
     private int currentVolumeSound;
 
     public int getMaxNumberRadio() {
+        maxNumberRadio = 9;
         return maxNumberRadio;
     }
 
@@ -47,12 +48,53 @@ public class Radio {
         this.currentNumberRadio = currentNumberRadio;
     }
 
+    public void firstStation() {
+        setCurrentNumberRadio(0);
+    }
+
+    public void secondStation() {
+        setCurrentNumberRadio(1);
+    }
+
+    public void thirdStation() {
+        setCurrentNumberRadio(2);
+    }
+
+    public void forthStation() {
+        setCurrentNumberRadio(3);
+    }
+
+    public void fiveStation() {
+        setCurrentNumberRadio(4);
+    }
+
+    public void sixStation() {
+        setCurrentNumberRadio(5);
+    }
+
+    public void sevenStation() {
+        setCurrentNumberRadio(6);
+    }
+
+    public void eightStation() {
+        setCurrentNumberRadio(7);
+    }
+
+    public void nineStation() {
+        setCurrentNumberRadio(8);
+    }
+
+    public void tenStation() {
+        setCurrentNumberRadio(9);
+    }
+
 //    Номер текущей радиостанции изменяется в пределах от 0 до 9
 //        Если текущая радиостанция - 9 и клиент нажал на кнопку next (следующая) на пульте, то текущей должна стать 0-ая
 //        Если текущая радиостанция - 0 и клиент нажал на кнопку prev (предыдущая) на пульте, то текущей должна стать 9-ая
 //        Клиент должен иметь возможность выставлять номер радиостанции с цифрового пульта (вводя числа 0 - 9)
 //
     public int getMaxVolumeSound() {
+        maxVolumeSound = 10;
 
         return maxVolumeSound;
     }
@@ -63,6 +105,7 @@ public class Radio {
     }
 
     public int getMinVolumeSound() {
+        minVolumeSound = 0;
 
         return minVolumeSound;
     }
