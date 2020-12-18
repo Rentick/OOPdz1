@@ -115,7 +115,7 @@ class RadioTest {
     @Test
     void tenStation() {
         Radio radio = new Radio();
-        radio.setCurrentNumberRadio(radio.getMaxNumberRadio() - 5);
+        radio.setCurrentNumberRadio(radio.getMaxNumberRadio());
         radio.tenStation();
         assertEquals(9, radio.getCurrentNumberRadio());
     }
